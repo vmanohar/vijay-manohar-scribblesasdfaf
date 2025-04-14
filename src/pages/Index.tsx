@@ -59,12 +59,16 @@ const Index = () => {
 
   return (
     <main className={`min-h-screen ${theme}`}>
-      <Navbar />
-      <Hero />
-      <About />
-      <Writing />
-      <Footer />
-      <ScrollToTop />
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <Navbar />
+        <div className="mx-auto max-w-prose">
+          <Hero />
+          <About />
+          <Writing />
+        </div>
+        <Footer />
+        <ScrollToTop />
+      </div>
     </main>
   );
 };

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowDown, Mail, Github, Linkedin, Twitter, BookOpen } from 'lucide-react';
 import { Strava } from '../ui/CustomIcons';
@@ -20,9 +21,9 @@ const SocialLink = ({ href, icon, label }: { href: string; icon: React.ReactNode
 
 const Hero = () => {
   return (
-    <section id="top" className="min-h-[80vh] flex flex-col justify-center items-center pt-10 px-4 sm:px-6 md:px-8 lg:px-16">
-      <div className="container-width max-w-2xl flex flex-col items-center text-center">
-        <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden mb-6 animate-fade-in border-2 border-accent shadow-lg">
+    <section id="top" className="min-h-[80vh] flex flex-col justify-center items-center pt-10">
+      <div className="w-full max-w-2xl mx-auto text-center">
+        <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden mb-6 animate-fade-in border-2 border-accent shadow-lg mx-auto">
           <img 
             src="/lovable-uploads/c7988759-4b7b-425b-9aa2-1262b7455fa6.png" 
             alt="Vijay Manohar" 
@@ -35,11 +36,11 @@ const Hero = () => {
           Vijay Manohar
         </h1>
         
-        <p className="text-sm md:text-base text-muted-foreground mb-4 max-w-md animate-fade-in">
+        <p className="text-sm md:text-base text-muted-foreground mb-4 max-w-md mx-auto animate-fade-in">
           Hey, I'm Vijay. I work at Light Labs. I now call Austin, Texas home after a few years living nomadically and in San Francisco.
         </p>
         
-        <div className="flex space-x-4 mt-4 mb-6 animate-fade-in">
+        <div className="flex space-x-4 mt-4 mb-6 animate-fade-in justify-center">
           <SocialLink 
             href="mailto:vijaymanohar4@gmail.com" 
             icon={<Mail className="w-5 h-5" />} 
@@ -67,7 +68,7 @@ const Hero = () => {
           />
         </div>
         
-        <div className="flex space-x-4 mt-6">
+        <div className="flex space-x-4 mt-6 justify-center">
           <a 
             href="#about" 
             className="action-button flex items-center justify-center underline-link"

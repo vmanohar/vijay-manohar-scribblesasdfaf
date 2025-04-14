@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
@@ -35,7 +36,7 @@ const About = () => {
 
   return (
     <section id="about" className="py-16 bg-secondary/30">
-      <div className="container-width">
+      <div className="w-full max-w-3xl mx-auto">
         <h2 
           ref={sectionRef as React.RefObject<HTMLHeadingElement>}
           className={`text-2xl md:text-3xl font-sohne mb-8 transition-opacity duration-500 ${hasIntersected ? 'opacity-100' : 'opacity-0'}`}
