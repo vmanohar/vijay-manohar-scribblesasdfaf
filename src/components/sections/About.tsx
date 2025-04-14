@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
@@ -43,7 +44,7 @@ const About = () => {
       <div className="w-full max-w-3xl mx-auto">
         <h2 
           ref={sectionRef as React.RefObject<HTMLHeadingElement>}
-          className={`text-2xl md:text-3xl font-sohne mb-8 transition-opacity duration-500 ${hasIntersected ? 'opacity-100' : 'opacity-0'}`}
+          className={`text-2xl md:text-3xl font-sohne mb-8 transition-opacity duration-500 px-4 py-2 rounded-lg hover:bg-accent hover:text-white inline-block ${hasIntersected ? 'opacity-100' : 'opacity-0'}`}
         >
           About Me
         </h2>
@@ -60,7 +61,7 @@ const About = () => {
           </p>
         </div>
         
-        <h3 className={`text-xl font-sohne mb-6 mt-10 transition-all duration-500 delay-300 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <h3 className={`text-xl font-sohne mb-6 mt-10 px-3 py-1 rounded-lg hover:bg-accent hover:text-white inline-block transition-all duration-500 delay-300 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           Timeline
         </h3>
         

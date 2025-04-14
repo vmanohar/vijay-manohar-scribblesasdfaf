@@ -52,14 +52,14 @@ const QuotesSection = () => {
     >
       <Link 
         to="/quotes" 
-        className="group flex items-center gap-3 p-4 rounded-lg border hover:bg-secondary/50 transition-all duration-300"
+        className="group flex items-center gap-3 p-4 rounded-lg border hover:bg-accent hover:text-white transition-all duration-300"
       >
-        <div className="p-2 rounded-full bg-secondary/50 group-hover:bg-secondary transition-colors duration-300">
-          <Quote className="w-5 h-5 text-primary" />
+        <div className="p-2 rounded-full bg-secondary/50 group-hover:bg-white/20 transition-colors duration-300">
+          <Quote className="w-5 h-5 text-primary group-hover:text-white" />
         </div>
         <div>
-          <h3 className="font-medium group-hover:text-accent transition-colors duration-300">Quotes I Return To</h3>
-          <p className="text-sm text-muted-foreground">A collection of words that have stayed with me over the years</p>
+          <h3 className="font-medium transition-colors duration-300">Quotes I Return To</h3>
+          <p className="text-sm text-muted-foreground group-hover:text-white/80">A collection of words that have stayed with me over the years</p>
         </div>
         <ExternalLink className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </Link>
@@ -75,7 +75,7 @@ const Writing = () => {
       <div className="w-full max-w-3xl mx-auto">
         <h2 
           ref={sectionRef as React.RefObject<HTMLHeadingElement>} 
-          className={`text-2xl md:text-3xl font-sohne mb-8 transition-opacity duration-500 ${hasIntersected ? 'opacity-100' : 'opacity-0'}`}
+          className={`text-2xl md:text-3xl font-sohne mb-8 px-4 py-2 rounded-lg hover:bg-accent hover:text-white inline-block transition-opacity duration-500 ${hasIntersected ? 'opacity-100' : 'opacity-0'}`}
         >
           Writing
         </h2>
