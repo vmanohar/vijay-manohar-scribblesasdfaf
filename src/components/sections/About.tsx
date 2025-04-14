@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
@@ -40,7 +39,7 @@ const About = () => {
   const { ref: sectionRef, hasIntersected } = useIntersectionObserver();
 
   return (
-    <section id="about" className="py-16 bg-secondary/30">
+    <section id="about" className="py-16">
       <div className="w-full max-w-3xl mx-auto">
         <h2 
           ref={sectionRef as React.RefObject<HTMLHeadingElement>}
@@ -93,30 +92,19 @@ const About = () => {
         <div className={`mt-10 transition-all duration-500 delay-400 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h3 className="text-xl font-sohne mb-4">Interests & Values</h3>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <li className="flex items-start">
-              <span className="text-accent mr-2">•</span>
-              <span>Transparent food systems – incentive alignment within our food system and consumers</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-accent mr-2">•</span>
-              <span>Meditation & mindfulness – daily practice, mental clarity, and awareness in how I show up</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-accent mr-2">•</span>
-              <span>Rooted living – ancestral habits, shared spaces, and deeper connection to people and place</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-accent mr-2">•</span>
-              <span>Self-experimentation (n=1) – testing habits, routines, and tools to see what actually works</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-accent mr-2">•</span>
-              <span>Physical challenges – HYROX, bodybuilding, and multi-day hikes</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-accent mr-2">•</span>
-              <span>Alternative education – building models that teach real skills, curiosity, and self-awareness</span>
-            </li>
+            {[
+              "Transparent food systems – incentive alignment within our food system and consumers",
+              "Meditation & mindfulness – daily practice, mental clarity, and awareness in how I show up",
+              "Rooted living – ancestral habits, shared spaces, and deeper connection to people and place",
+              "Self-experimentation (n=1) – testing habits, routines, and tools to see what actually works",
+              "Physical challenges – HYROX, bodybuilding, and multi-day hikes",
+              "Alternative education – building models that teach real skills, curiosity, and self-awareness"
+            ].map((interest, index) => (
+              <li key={index} className="flex items-start">
+                <span className="text-muted-foreground mr-2 text-lg">•</span>
+                <span className="text-base">{interest}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
