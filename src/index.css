@@ -1,0 +1,232 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 30% 98%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 10% 3.9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 266 100% 90%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 0 0% 98%;
+  }
+
+  * {
+    @apply border-border;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    line-height: 1.6;
+  }
+
+  /* Theme transition effects - faster transitions */
+  .theme-transition {
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .theme-transitioning * {
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, 
+                box-shadow 0.2s ease, transform 0.2s ease, opacity 0.2s ease !important;
+  }
+
+  .link-hover {
+    @apply relative inline-block text-primary underline-offset-4 hover:text-accent transition-colors duration-300;
+    text-decoration-thickness: 1px;
+    text-decoration: underline;
+  }
+  
+  .dark .link-hover:hover {
+    @apply text-[#FFD580];
+  }
+  
+  .link-hover:hover {
+    text-decoration-thickness: 2px;
+    @apply text-accent;
+  }
+
+  .underline-link {
+    @apply relative text-primary hover:text-accent;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: all 0.2s ease;
+  }
+  
+  .dark .underline-link:hover {
+    @apply text-[#FFD580];
+  }
+  
+  .underline-link:hover {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .container-width {
+    @apply w-full max-w-4xl mx-auto px-6 md:px-8;
+  }
+  
+  /* Scroll to top button */
+  .scroll-to-top {
+    @apply fixed bottom-6 right-6 bg-background/80 backdrop-blur-sm shadow-md rounded-full p-2 border transition-all duration-300 opacity-0 pointer-events-none z-50;
+  }
+  
+  .scroll-to-top.visible {
+    @apply opacity-100 pointer-events-auto;
+  }
+  
+  .scroll-to-top:hover {
+    @apply transform -translate-y-1;
+  }
+  
+  .dark .scroll-to-top:hover {
+    @apply border-[#FFD580];
+  }
+  
+  .dark .action-button:hover {
+    @apply bg-[#FFD580] border-[#FFD580] text-gray-900;
+  }
+  
+  /* Enhanced typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sohne font-semibold tracking-wide;
+    line-height: 1.3;
+  }
+  
+  h2 {
+    @apply tracking-wide;
+    letter-spacing: 0.03em;
+  }
+
+  /* Social link hover effects */
+  .social-link {
+    @apply transition-transform duration-300;
+  }
+  
+  .social-link:hover {
+    @apply text-accent;
+    transform: translateY(-2px);
+  }
+  
+  .dark .social-link:hover {
+    @apply text-[#FFD580];
+  }
+  
+  /* Action buttons */
+  .action-button {
+    @apply bg-transparent border border-primary text-primary px-4 py-2 rounded-md transition-all duration-300;
+  }
+  
+  .action-button:hover {
+    @apply bg-accent border-accent text-white;
+  }
+  
+  /* Dark mode toggle improvements */
+  .dark .dark-mode-toggle {
+    @apply border border-white/30 text-white;
+  }
+  
+  /* Custom theme toggle styling */
+  [data-state="checked"].switch-thumb {
+    transform: translateX(1rem);
+  }
+  
+  /* Quote styling for the quotes page */
+  .quote-card {
+    @apply p-6 mb-8 bg-secondary/50 rounded-lg transition-all duration-300;
+  }
+  
+  .dark .quote-card {
+    @apply bg-secondary/30 hover:bg-secondary/40;
+  }
+  
+  .quote-card:hover {
+    @apply shadow-md transform -translate-y-1;
+  }
+  
+  .quote-text {
+    @apply text-lg leading-relaxed mb-4 font-body;
+  }
+  
+  .quote-author {
+    @apply text-right text-sm text-muted-foreground italic;
+  }
+}
