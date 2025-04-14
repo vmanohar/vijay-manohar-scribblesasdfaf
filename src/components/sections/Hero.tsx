@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowDown, Mail, Github, Linkedin, Twitter, BookOpen } from 'lucide-react';
 import { Strava } from '../ui/CustomIcons';
@@ -33,14 +32,13 @@ const Hero = () => {
         </div>
         
         <h1 className="text-2xl md:text-3xl font-sohne font-semibold mb-3 animate-fade-in tracking-wide">
-          Vijay Manohar
+          Bijay⭐ Manohar
         </h1>
         
         <p className="text-sm md:text-base text-muted-foreground mb-4 max-w-md animate-fade-in">
           Co-founder at <a href="https://www.lightlabs.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">Light Labs</a>. Into movement, mindfulness, and figuring out better ways to consume, create, learn, and live.
         </p>
         
-        {/* Social Links */}
         <div className="flex space-x-4 mt-4 mb-6 animate-fade-in">
           <SocialLink 
             href="mailto:vijaymanohar4@gmail.com" 
