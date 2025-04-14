@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowDown, Mail, Github, Linkedin, Twitter, BookOpen } from 'lucide-react';
 import { Strava } from '../ui/CustomIcons';
@@ -21,8 +20,8 @@ const SocialLink = ({ href, icon, label }: { href: string; icon: React.ReactNode
 
 const Hero = () => {
   return (
-    <section id="top" className="min-h-[80vh] flex flex-col justify-center items-center pt-10">
-      <div className="container-width flex flex-col items-center text-center">
+    <section id="top" className="min-h-[80vh] flex flex-col justify-center items-center pt-10 px-4 sm:px-6 md:px-8 lg:px-16">
+      <div className="container-width max-w-2xl flex flex-col items-center text-center">
         <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden mb-6 animate-fade-in border-2 border-accent shadow-lg">
           <img 
             src="/lovable-uploads/c7988759-4b7b-425b-9aa2-1262b7455fa6.png" 
@@ -71,7 +70,7 @@ const Hero = () => {
         <div className="flex space-x-4 mt-6">
           <a 
             href="#about" 
-            className="action-button flex items-center justify-center"
+            className="action-button flex items-center justify-center underline-link"
           >
             <ArrowDown className="w-3 h-3 mr-2" />
             About me
@@ -79,7 +78,7 @@ const Hero = () => {
           
           <a 
             href="#writing" 
-            className="action-button flex items-center justify-center"
+            className="action-button flex items-center justify-center underline-link"
           >
             <BookOpen className="w-3 h-3 mr-2" />
             My writing
