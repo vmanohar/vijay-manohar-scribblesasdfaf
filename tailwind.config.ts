@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -69,8 +68,8 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				"highlight-dark": "#004225",
-				"highlight-light": "#FFD580"
+				"highlight-dark": "#FFD580",
+				"highlight-light": "#004225"
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
