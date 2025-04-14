@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -176,8 +177,8 @@ A friend? What is a friend? Just one, I repeat, with whom you dare to be yoursel
   return (
     <main className={`min-h-screen ${theme}`}>
       <Navbar />
-      <div className="py-16">
-        <div className="container-width">
+      <div className="py-16 bg-secondary/20 dark:bg-secondary/10 min-h-screen">
+        <div className="max-w-[800px] mx-auto px-4 sm:px-6 md:px-8">
           <div className="mb-8">
             <Link 
               to="/" 
