@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowDown, Mail, Github, Linkedin, Twitter, BookOpen } from 'lucide-react';
 import { Strava } from '../ui/CustomIcons';
@@ -71,7 +70,7 @@ const Hero = () => {
         <div className="flex space-x-4 mt-6 justify-center">
           <a 
             href="#about" 
-            className="action-button flex items-center justify-center underline-link"
+            className="action-button flex items-center justify-center"
           >
             <ArrowDown className="w-3 h-3 mr-2" />
             About me
@@ -79,7 +78,7 @@ const Hero = () => {
           
           <a 
             href="#writing" 
-            className="action-button flex items-center justify-center underline-link"
+            className="action-button flex items-center justify-center"
           >
             <BookOpen className="w-3 h-3 mr-2" />
             My writing

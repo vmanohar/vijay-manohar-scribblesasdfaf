@@ -6,7 +6,12 @@ const TimelineItem = ({ year, title, description, link }: { year: string; title:
   const { ref, hasIntersected } = useIntersectionObserver({ threshold: 0.2 });
   
   const titleContent = link ? (
-    <a href={link} target="_blank" rel="noopener noreferrer" className="text-xl font-medium mb-2 hover:text-accent transition-colors duration-300">
+    <a 
+      href={link} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="text-xl font-medium mb-2 hover:text-accent transition-colors duration-300"
+    >
       {title}
     </a>
   ) : (
@@ -65,7 +70,7 @@ const About = () => {
             year="2024 - Present" 
             title="Light Labs, Co-founder" 
             description="Building a healthier food system through lab testing."
-            link="https://lightlabs.com"
+            link="https://www.lightlabs.com"
           />
           <TimelineItem 
             year="2023 - 2024" 
@@ -76,7 +81,7 @@ const About = () => {
             year="2018 - 2023" 
             title="Samsara, Growth and GTM" 
             description="The best education I could have asked for, along for the ride from startup to IPO ($IOT). Lived all over LATAM and Europe."
-            link="https://samsara.com"
+            link="https://www.samsara.com"
           />
           <TimelineItem 
             year="2013 - 2017" 
