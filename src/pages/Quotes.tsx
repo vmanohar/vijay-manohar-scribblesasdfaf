@@ -33,20 +33,16 @@ const Quotes = () => {
   
   const quotes: QuoteType[] = [
     {
+      quote: `Look straight ahead. What's there? If you see it as it is You will never err.`,
+      author: "Bassui Tokusho, 13th century samurai"
+    },
+    {
       quote: `If you're going to try, go all the way. Otherwise, don't even start. This could mean losing girlfriends, wives, relatives and maybe even your mind. It could mean not eating for three or four days. It could mean freezing on a park bench. It could mean jail. It could mean derision. It could mean mockery—-isolation. Isolation is the gift. All the others are a test of your endurance, of how much you really want to do it. And, you'll do it, despite rejection and the worst odds. And it will be better than anything else you can imagine. If you're going to try, go all the way. There is no other feeling like that. You will be alone with the gods, and the nights will flame with fire. You will ride life straight to perfect laughter. It's the only good fight there is.`,
       author: "Charles Bukowski, *Factotum*"
     },
     {
       quote: `I know that talent doesn't feel like you're amazing. It feels like the difficulties that trouble others are mysteriously absent in your case. Don't ask yourself where your true gifts lie. Ask what other people seem weirdly bad at.`,
       author: "Author Unknown (often circulated online)"
-    },
-    {
-      quote: `Look straight ahead. What's there? If you see it as it is You will never err.`,
-      author: "Bassui Tokusho"
-    },
-    {
-      quote: `Strangely, life gets harder when you try to make it easy. Exercising might be hard, but never moving makes life harder. Uncomfortable conversations are hard, but avoiding every conflict is harder. Mastering your craft is hard, but having no skills is harder. Easy has a cost.`,
-      author: "James Clear (attributed, paraphrased)"
     },
     {
       quote: `I hear babies cry

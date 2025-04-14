@@ -30,7 +30,7 @@ const Navbar = () => {
       {/* Enhanced toggle for dark mode - Always visible */}
       <div 
         className={cn(
-          "fixed top-4 right-4 z-50 p-2 rounded-full bg-background/80 backdrop-blur-md shadow-md transition-all duration-200",
+          "fixed top-4 right-4 z-[60] p-2 rounded-full bg-background/80 backdrop-blur-md shadow-md transition-all duration-200",
           theme === 'dark' 
             ? "border border-white/20 shadow-white/10" 
             : "border border-black/10 shadow-black/5"
@@ -61,8 +61,8 @@ const Navbar = () => {
         )}
       >
         <div className="container-width flex justify-end items-center md:px-4">
-          {/* Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
+          {/* Mobile Menu Button - moved to the left to avoid overlap with theme toggle */}
+          <div className="flex items-center space-x-4 mr-16">
             <button 
               className="flex flex-col space-y-1.5 p-2"
               onClick={toggleMobileMenu}
