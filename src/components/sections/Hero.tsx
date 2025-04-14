@@ -71,18 +71,18 @@ const Hero = () => {
         <div className="flex space-x-4 mt-6 justify-center">
           <a 
             href="#about" 
-            className="action-button flex items-center justify-center group"
+            className="flex items-center justify-center group text-primary hover:text-white transition-colors duration-300"
           >
-            <ArrowDown className="w-3 h-3 mr-2 group-hover:text-white transition-colors duration-300" />
-            <span className="group-hover:text-white transition-colors duration-300">About me</span>
+            <ArrowDown className="w-3 h-3 mr-2 group-hover:text-white" />
+            <span>About me</span>
           </a>
           
           <a 
             href="#writing" 
-            className="action-button flex items-center justify-center group"
+            className="flex items-center justify-center group text-primary hover:text-white transition-colors duration-300"
           >
-            <BookOpen className="w-3 h-3 mr-2 group-hover:text-white transition-colors duration-300" />
-            <span className="group-hover:text-white transition-colors duration-300">My writing</span>
+            <BookOpen className="w-3 h-3 mr-2 group-hover:text-white" />
+            <span>My writing</span>
           </a>
         </div>
       </div>

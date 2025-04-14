@@ -75,7 +75,7 @@ const Writing = () => {
       <div className="w-full max-w-3xl mx-auto">
         <h2 
           ref={sectionRef as React.RefObject<HTMLHeadingElement>} 
-          className={`text-2xl md:text-3xl font-sohne mb-8 px-4 py-2 rounded-lg hover:bg-accent hover:text-white inline-block transition-opacity duration-500 ${hasIntersected ? 'opacity-100' : 'opacity-0'}`}
+          className={`text-2xl md:text-3xl font-sohne mb-8 transition-opacity duration-500 inline-block ${hasIntersected ? 'opacity-100' : 'opacity-0'}`}
         >
           Writing
         </h2>
