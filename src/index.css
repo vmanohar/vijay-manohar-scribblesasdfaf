@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -44,6 +45,11 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Light mode accent color */
+    --accent-color: #FFD580;
+    --accent-hover-color: #ffc44d;
+    --accent-light-color: rgba(255, 213, 128, 0.2);
   }
 
   .dark {
@@ -74,6 +80,11 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 0 0% 98%;
+
+    /* Dark mode accent color */
+    --accent-color: #004225;
+    --accent-hover-color: #005a32;
+    --accent-light-color: rgba(0, 66, 37, 0.1);
   }
 
   * {
@@ -105,13 +116,16 @@
   }
   
   .dark .link-hover:hover {
-    @apply text-[#FFD580];
+    @apply text-highlight-dark;
+  }
+  
+  .light .link-hover:hover {
+    @apply text-highlight-light;
   }
   
   .link-hover:hover {
     text-decoration-thickness: 3px;
     text-underline-offset: 4px;
-    @apply text-accent;
   }
 
   .underline-link {
@@ -123,7 +137,11 @@
   }
   
   .dark .underline-link {
-    @apply hover:text-[#FFD580];
+    @apply hover:text-highlight-dark;
+  }
+  
+  .light .underline-link:hover {
+    @apply hover:text-highlight-light;
   }
   
   .underline-link:hover {
@@ -142,7 +160,11 @@
   }
   
   .dark .social-link:hover {
-    @apply text-[#FFD580];
+    @apply text-highlight-dark;
+  }
+  
+  .light .social-link:hover {
+    @apply text-highlight-light;
   }
   
   /* Action buttons */
@@ -152,6 +174,14 @@
   
   .action-button:hover {
     @apply bg-accent border-accent text-white;
+  }
+  
+  .dark .action-button:hover {
+    @apply bg-highlight-dark border-highlight-dark;
+  }
+  
+  .light .action-button:hover {
+    @apply bg-highlight-light border-highlight-light text-foreground;
   }
   
   /* Dark mode toggle improvements */

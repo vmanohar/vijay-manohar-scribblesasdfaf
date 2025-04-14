@@ -34,13 +34,17 @@ const ScrollToTop = () => {
       className={cn(
         'fixed bottom-4 right-4 z-50 bg-background p-2 rounded-full shadow-lg border transition-all',
         isVisible ? 'opacity-100 visible' : 'opacity-0 invisible',
-        theme === 'dark' ? 'border-[#FFD580]/50 hover:border-[#FFD580]' : 'border-gray-300 hover:border-gray-500'
+        theme === 'dark' 
+          ? 'border-highlight-dark/50 hover:border-highlight-dark' 
+          : 'border-highlight-light/70 hover:border-highlight-light'
       )}
       aria-label="Scroll to top"
     >
       <ArrowUp className={cn(
         "w-5 h-5 transition-colors duration-300",
-        theme === 'dark' ? 'hover:text-[#FFD580]' : 'hover:text-accent'
+        theme === 'dark' 
+          ? 'hover:text-highlight-dark' 
+          : 'hover:text-highlight-light'
       )} />
     </button>
   );

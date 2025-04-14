@@ -31,9 +31,9 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				accent: {
-					DEFAULT: '#004225',
-					hover: '#005a32',
-					light: 'rgba(0, 66, 37, 0.1)',
+					DEFAULT: 'var(--accent-color)',
+					hover: 'var(--accent-hover-color)',
+					light: 'var(--accent-light-color)',
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
@@ -69,7 +69,8 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				"highlight-dark": "#FFD580"
+				"highlight-dark": "#004225",
+				"highlight-light": "#FFD580"
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
