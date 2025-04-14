@@ -2,18 +2,40 @@
 import React from 'react';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
-const TimelineItem = ({ year, title, description, link }: { year: string; title: string; description: string; link?: string }) => {
+interface TimelineItemProps {
+  year: string;
+  title: string;
+  description: string;
+  link?: string;
+  linkedText?: string;
+}
+
+const TimelineItem = ({ year, title, description, link, linkedText }: TimelineItemProps) => {
   const { ref, hasIntersected } = useIntersectionObserver({ threshold: 0.2 });
   
-  const titleContent = link ? (
-    <a 
-      href={link} 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="text-xl font-medium mb-2 hover:text-accent transition-colors duration-300"
-    >
-      {title}
-    </a>
+  const titleContent = link && linkedText ? (
+    <h3 className="text-xl font-medium mb-2">
+      {title.split(linkedText).map((part, index, array) => {
+        // If this is the last part and there's no linked text left to add
+        if (index === array.length - 1) {
+          return <span key={index}>{part}</span>;
+        }
+        // Return the part followed by the linked text
+        return (
+          <React.Fragment key={index}>
+            {part}
+            <a 
+              href={link} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-accent transition-colors duration-300"
+            >
+              {linkedText}
+            </a>
+          </React.Fragment>
+        );
+      })}
+    </h3>
   ) : (
     <h3 className="text-xl font-medium mb-2">{title}</h3>
   );
@@ -71,6 +93,7 @@ const About = () => {
             title="Light Labs, Co-founder" 
             description="Building a healthier food system through lab testing."
             link="https://www.lightlabs.com"
+            linkedText="Light Labs"
           />
           <TimelineItem 
             year="2023 - 2024" 
@@ -82,6 +105,7 @@ const About = () => {
             title="Samsara, Growth and GTM" 
             description="The best education I could have asked for, along for the ride from startup to IPO ($IOT). Lived all over LATAM and Europe."
             link="https://www.samsara.com"
+            linkedText="Samsara"
           />
           <TimelineItem 
             year="2013 - 2017" 

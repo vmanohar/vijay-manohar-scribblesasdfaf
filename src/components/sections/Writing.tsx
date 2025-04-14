@@ -52,16 +52,16 @@ const QuotesSection = () => {
     >
       <Link 
         to="/quotes" 
-        className="group flex items-center gap-3 p-4 rounded-lg border hover:bg-accent hover:text-white transition-all duration-300"
+        className="group flex items-center gap-3 p-4 rounded-lg border hover:bg-accent hover:text-white transition-all duration-200"
       >
-        <div className="p-2 rounded-full bg-secondary/50 group-hover:bg-white/20 transition-colors duration-300">
-          <Quote className="w-5 h-5 text-primary group-hover:text-white" />
+        <div className="p-2 rounded-full bg-secondary/50 group-hover:bg-white/20 transition-colors duration-200">
+          <Quote className="w-5 h-5 text-primary group-hover:text-white transition-colors duration-200" />
         </div>
         <div>
-          <h3 className="font-medium transition-colors duration-300">Quotes I Return To</h3>
-          <p className="text-sm text-muted-foreground group-hover:text-white/80">A collection of words that have stayed with me over the years</p>
+          <h3 className="font-medium transition-colors duration-200">Quotes I Return To</h3>
+          <p className="text-sm text-muted-foreground group-hover:text-white/80 transition-colors duration-200">A collection of words that have stayed with me over the years</p>
         </div>
-        <ExternalLink className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <ExternalLink className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
       </Link>
     </div>
   );
