@@ -68,20 +68,20 @@ const Hero = () => {
           />
         </div>
         
-        <div className="flex space-x-4 mt-6 justify-center">
+        <div className="flex flex-wrap gap-4 mt-6 justify-center">
           <a 
             href="#about" 
-            className="flex items-center justify-center group text-primary hover:text-white transition-colors duration-300"
+            className="flex items-center justify-center px-4 py-2 rounded-md border border-primary/30 bg-background hover:bg-accent-hover hover:text-white transition-all duration-300 dark:hover:bg-highlight-light light:hover:bg-highlight-dark light:hover:text-foreground"
           >
-            <ArrowDown className="w-3 h-3 mr-2 group-hover:text-white" />
+            <ArrowDown className="w-3 h-3 mr-2" />
             <span>About me</span>
           </a>
           
           <a 
             href="#writing" 
-            className="flex items-center justify-center group text-primary hover:text-white transition-colors duration-300"
+            className="flex items-center justify-center px-4 py-2 rounded-md border border-primary/30 bg-background hover:bg-accent-hover hover:text-white transition-all duration-300 dark:hover:bg-highlight-light light:hover:bg-highlight-dark light:hover:text-foreground"
           >
-            <BookOpen className="w-3 h-3 mr-2 group-hover:text-white" />
+            <BookOpen className="w-3 h-3 mr-2" />
             <span>My writing</span>
           </a>
         </div>
