@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowDown, Mail, Github, Linkedin, Twitter, BookOpen } from 'lucide-react';
 import { Strava } from '../ui/CustomIcons';
@@ -71,7 +70,15 @@ const Hero = () => {
         <div className="flex flex-wrap gap-4 mt-6 justify-center">
           <a 
             href="#about" 
-            className="flex items-center justify-center px-4 py-2 rounded-md border border-primary/30 bg-background hover:bg-accent-hover hover:text-white transition-all duration-300 dark:hover:bg-highlight-light light:hover:bg-highlight-dark light:hover:text-foreground"
+            className="flex items-center justify-center px-4 py-2 rounded-md border border-primary/30 bg-background 
+              transition-all duration-300 
+              text-primary 
+              hover:bg-accent 
+              hover:text-white 
+              dark:hover:bg-highlight-dark 
+              dark:hover:text-foreground 
+              light:hover:bg-highlight-light 
+              light:hover:text-white"
           >
             <ArrowDown className="w-3 h-3 mr-2" />
             <span>About me</span>
@@ -79,7 +86,15 @@ const Hero = () => {
           
           <a 
             href="#writing" 
-            className="flex items-center justify-center px-4 py-2 rounded-md border border-primary/30 bg-background hover:bg-accent-hover hover:text-white transition-all duration-300 dark:hover:bg-highlight-light light:hover:bg-highlight-dark light:hover:text-foreground"
+            className="flex items-center justify-center px-4 py-2 rounded-md border border-primary/30 bg-background 
+              transition-all duration-300 
+              text-primary 
+              hover:bg-accent 
+              hover:text-white 
+              dark:hover:bg-highlight-dark 
+              dark:hover:text-foreground 
+              light:hover:bg-highlight-light 
+              light:hover:text-white"
           >
             <BookOpen className="w-3 h-3 mr-2" />
             <span>My writing</span>
